@@ -1,0 +1,29 @@
+sudo su-	
+Add user user420
+/etc/passwd
+add group group900
+ls
+add us er420 group
+del user user name(inside root)
+script filename
+script filenmae -a
+ls -al
+pwt
+cd directory name
+cd ../
+mkdir iphone
+rmdir ipad(it should be empty) 
+cat < Hatter and rm file name
+clear
+chown user20 filename
+chgrp file name
+chmod a+rx
+chmod u-w filename
+cd cat/filename mv user
+mv videos 
+cp pink.txt 
+cp picture 
+histry 18
+sudo cp / home/ user15
+exit
+nano script file

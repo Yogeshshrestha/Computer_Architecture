@@ -1,0 +1,444 @@
+Script started on 2020-05-04 21:08:10+0545
+ogesh@lucky-VirtualBox: sudo su _[K-
+[sudo] password for yogesh: 
+root@lucky-VirtualBox:~# adduser monica
+Adding user `monica' ...
+Adding new group `monica' (1001) ...
+Adding new user `monica' (1001) with group `monica' ...
+The home directory `/home/monica' already exists.  Not copying from `/etc/skel'.
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+Changing the user information for monica
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] y
+root@lucky-VirtualBox:~# adduser s[Krachel
+Adding user `rachel' ...
+Adding new group `rachel' (1002) ...
+Adding new user `rachel' (1002) with group `rachel' ...
+The home directory `/home/rachel' already exists.  Not copying from `/etc/skel'.
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+Changing the user information for rachel
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] y
+root@lucky-VirtualBox:~# s[Kaddgroup chandler
+Adding group `chandler' (GID 1003) ...
+Done.
+root@lucky-VirtualBox:~# addgroup ross
+Adding group `ross' (GID 1004) ...
+Done.
+root@lucky-VirtualBox:~# adduser monix[K[Kca[K[Kica chandler
+Adding user `monica' to group `chandler' ...
+Adding user monica to group chandler
+Done.
+root@lucky-VirtualBox:~# adduser monica ross
+Adding user `monica' to group `ross' ...
+Adding user monica to group ross
+Done.
+root@lucky-VirtualBox:~# add [Kuser e[Krachel chandler ross
+adduser: Only one or two names allowed.
+root@lucky-VirtualBox:~# adduser rachel chandler
+Adding user `rachel' to group `chandler' ...
+Adding user rachel to group chandler
+Done.
+root@lucky-VirtualBox:~# adduser ross
+adduser: The group `ross' already exists.
+root@lucky-VirtualBox:~# visudo[K[K[K[K[K[Kcat /etc/groups[K
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,yogesh
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:yogesh
+floppy:x:25:
+tape:x:26:
+sudo:x:27:yogesh
+audio:x:29:pulse
+dip:x:30:yogesh
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:yogesh
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+input:x:104:
+crontab:x:105:
+syslog:x:106:
+messagebus:x:107:
+netdev:x:108:
+mlocate:x:109:
+ssl-cert:x:110:
+uuidd:x:111:
+avahi-autoipd:x:112:
+bluetooth:x:113:
+rtkit:x:114:
+ssh:x:115:
+lpadmin:x:116:yogesh
+whoopsie:x:117:
+scanner:x:118:saned
+saned:x:119:
+pulse:x:120:
+pulse-access:x:121:
+avahi:x:122:
+colord:x:123:
+geoclue:x:124:
+gdm:x:125:
+yogesh:x:1000:
+sambashare:x:126:yogesh
+monica:x:1001:
+rachel:x:1002:
+chandler:x:1003:monica,rachel
+ross:x:1004:monica
+root@lucky-VirtualBox:~# visudo
+[?1049h[22;0;0t[1;28r(B[m[4l[?7h[39;49m[?1h=[?1h=[?1h=[?25l[39;49m(B[m[H[2J[26;32H(B[0;7m[ Reading File ](B[m[26;38H(B[0;7m 30 lines ](B[m[H(B[0;7m  GNU nano 2.9.3                  /etc/sudoers.tmp                             [1;78H(B[m
+[27d(B[0;7m^G(B[m Get Help    (B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify
+[28d(B[0;7m^X(B[m Exit[28;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell
+[26d[3d[39;49m[36m#[4d# This file MUST be edited with the 'visudo' command as root.
+[5d#[6d# Please consider adding local content in /etc/sudoers.d/ instead of
+[7d# directly modifying this file.
+[8d#[9d# See the man page for details on how to write a sudoers file.
+[10d#[11d[39m(B[mDefaults[11;17Henv_reset
+[12dDefaults[12;17Hmail_badpass
+[13dDefaults[13;17Hsecure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin$[15;1H[36m# Host alias specification
+[17d# User alias specification
+[19d# Cmnd alias specification
+[21d# User privilege specification
+[22d[39m(B[mroot    ALL=(ALL:ALL) ALL
+[24d[36m# Members of the admin group may gain root privileges
+[25d[39m(B[m%admin ALL=(ALL) ALL
+[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[6d[?12l[?25h[?25l[7d[?12l[?25h[?25l[8d[?12l[?25h[?25l[9d[?12l[?25h[?25l[10d[?12l[?25h[?25l[11d[?12l[?25h[?25l[12d[?12l[?25h[?25l[13d[?12l[?25h[?25l[14d[?12l[?25h[?25l[15d[?12l[?25h[?25l[16d[?12l[?25h[?25l[17d[?12l[?25h[?25l[18d[?12l[?25h[?25l[19d[?12l[?25h[?25l[20d[?12l[?25h[?25l[21d[?12l[?25h[?25l[22d[?12l[?25h[?25l[23d[?12l[?25h[?25l[24d[?12l[?25h[?25l[A[?12l[?25h[?25l[1;70H(B[0;7mModified(B[m
+[23dm[?12l[?25h[?25lo[?12l[?25h[?25ln[?12l[?25h[?25li
+[26d[K[23;5H[?12l[?25h[?25lc[?12l[?25h[?25la[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l=[?12l[?25h[?25l([?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l:[?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l)[?12l[?25h[?25l [?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l
+[24d[K[25d[36m# Members of the admin group may gain root privileges
+[A[39m(B[m[?12l[?25h[?25lr[?12l[?25h[?25la[?12l[?25h[?25lc[?12l[?25h[?25lh[?12l[?25h[?25le[?12l[?25h[?25ll[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l=[?12l[?25h[?25l([?12l[?25h[?25l)[?12l[?25h[?25l[?12l[?25h[?25lA)[?12l[?25h[?25lL)[?12l[?25h[?25lLL)[?12l[?25h[?25l:)[?12l[?25h[?25lA)[?12l[?25h[?25lL)[?12l[?25h[?25lLL)[?12l[?25h[?25l)[?12l[?25h[?25l [?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l[25d[?12l[?25h[?25l7[2;26r8
+[26d[12S[1;28r[14;1H%admin ALL=(ALL) ALL
+[16d[36m# Allow members of group sudo to execute any command
+[17d[39m(B[m%sudo   ALL=(ALL:ALL) ALL
+[19d[36m# See sudoers(5) for more information on "#include" directives:
+[21d#includedir /etc/sudoers.d[14;21H[39m(B[m[?12l[?25h[?25l
+[15d[?12l[?25h[?25lM[?12l[?25h[?25lo[?12l[?25h[?25l [?12l[?25h[?25l[K[?12l[?25h[?25lm[?12l[?25h[?25lo[?12l[?25h[?25ln[?12l[?25h[?25li[?12l[?25h[?25lc[?12l[?25h[?25la[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25lA[?12l[?25h[?25l [?12l[?25h[?25l[?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l=[?12l[?25h[?25l([?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l)[?12l[?25h[?25l[15;25H[?12l[?25h[?25l[15;17H[?12l[?25h[?25l [?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l%monica ALL=(ALL) ALL
+%[?12l[?25h[?25lm[?12l[?25h[?25lo[?12l[?25h[?25ln[?12l[?25h[?25li[?12l[?25h[?25lc[?12l[?25h[?25la[?12l[?25h[?25l [?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l=[?12l[?25h[?25l([?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l)[?12l[?25h[?25l [?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l7[16;26r8
+[16dM[1;28r[16;1H[?12l[?25h[?25l%[?12l[?25h[?25lR[?12l[?25h[?25lA[?12l[?25h[?25lC[?12l[?25h[?25lH[?12l[?25h[?25lE[?12l[?25h[?25lL[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25la[?12l[?25h[?25lc[?12l[?25h[?25lh[?12l[?25h[?25le[?12l[?25h[?25ll[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25lrachel
+%r[?12l[?25h[?25la[?12l[?25h[?25lc[?12l[?25h[?25lh[?12l[?25h[?25le[?12l[?25h[?25ll[?12l[?25h[?25l
+[17d[?12l[?25h[?25l[16;8H[?12l[?25h[?25l [?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l=[?12l[?25h[?25l([?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l)[?12l[?25h[?25l [?12l[?25h[?25la[?12l[?25h[?25l [?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l[17d[?12l[?25h[?25l[18d[?12l[?25h[?25l [?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l7[19;26r8
+[19dM[1;28r[19;1H[?12l[?25h[?25l%[?12l[?25h[?25lm[?12l[?25h[?25lo[?12l[?25h[?25ln[?12l[?25h[?25li[?12l[?25h[?25lc[?12l[?25h[?25la[?12l[?25h[?25l [?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l=[?12l[?25h[?25l([?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l:[?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l)[?12l[?25h[?25l [?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l7[20;26r8
+[20dM[1;28r[20;1H[?12l[?25h[?25l%[?12l[?25h[?25lr[?12l[?25h[?25la[?12l[?25h[?25lc[?12l[?25h[?25lh[?12l[?25h[?25le[?12l[?25h[?25l;[?12l[?25h[?25l [?12l[?25h[?25ll[?12l[?25h[?25l [?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l=[?12l[?25h[?25l([?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l:[?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l [?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lL[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l) ALL[?12l[?25h[?25l
+[23d[?12l[?25h[?25l[24;22H[?12l[?25h[?25l[C[?12l[?25h[?25l
+[25d[?12l[?25h[?25l[26d(B[0;7mSave modified buffer?  (Answering "No" will DISCARD changes.)                  [27;1H Y(B[m Yes[K
+[28d(B[0;7m N(B[m No  [28;16H (B[0;7m^C(B[m Cancel[K[26;63H[?12l[?25h[?25l
+[27d(B[0;7m^G(B[m Get Help[27;20H(B[0;7mM-D(B[m DOS Format     (B[0;7mM-A(B[m Append[27;58H(B[0;7mM-B(B[m Backup File
+[28d(B[0;7m^C(B[m Cancel[17G   (B[0;7mM-M(B[m Mac Format     (B[0;7mM-P(B[m Prepend[28;58H(B[0;7m^T(B[m To Files
+[26d(B[0;7mFile Name to Write: /etc/sudoers.tmp                         
+(B[m[26;37H[?12l[?25h[?25l
+[K[1;78H[1;70H(B[0;7m        (B[m[26;31H(B[0;7m[ Wrote 34 lines ](B[m
+[J[28;79H[?12l[?25h[28;1H[?1049l[23;0;0t
+[?1l>root@lucky-VirtualBox:~# su - monica
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxmkdir D1
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxcd D1[K[K[K[K[Kmkdir centrak[Kl
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxls
+[0m[01;34mcentral[0m  [01;34mD1[0m  examples.desktop
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxlas[K[Ks -al
+total 40
+drwxr-xr-x 4 monica monica 4096 मई     4 21:30 [0m[01;34m.[0m
+drwxr-xr-x 5 root   root   4096 मई     4 09:37 [01;34m..[0m
+-rw-r--r-- 1 monica monica  220 मई     4 09:19 .bash_logout
+-rw-r--r-- 1 monica monica 3771 मई     4 09:19 .bashrc
+drwxrwxr-x 2 monica monica 4096 मई     4 21:30 [01;34mcentral[0m
+drwxrwxr-x 2 monica monica 4096 मई     4 21:29 [01;34mD1[0m
+-rw-r--r-- 1 monica monica 8980 मई     4 09:19 examples.desktop
+-rw-r--r-- 1 monica monica  807 मई     4 09:19 .profile
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxdelD1
+delD1: command not found
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxdel D1
+
+Command 'del' not found, did you mean:
+
+  command 'den' from snap den (1.2.0-0)
+  command 'hdel' from deb hfsutils
+  command 'wdel' from deb wput
+  command 'qdel' from deb gridengine-client
+  command 'qdel' from deb slurm-wlm-torque
+  command 'el' from deb oneliner-el
+  command 'delp' from deb fp-utils-3.0.4
+  command 'delv' from deb dnsutils
+  command 'dex' from deb dex
+  command 'dll' from deb brickos
+  command 'bel' from deb belier
+  command 'tel' from deb orville-write
+  command 'dep' from deb go-dep
+  command 'deal' from deb deal
+  command 'mdel' from deb mtools
+
+See 'snap info <snapname>' for additional versions.
+
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxD[Kdelmkdir D1
+delmkdir: command not found
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxmkdir perk
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxcd central
+monica@lucky-VirtualBox: ~/central[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/central[00m$ cat smellycat
+cat: smellycat: No such file or directory
+monica@lucky-VirtualBox: ~/central[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/central[00m$ cd[K[Kcat > ceny[Ktral
+a ^C
+monica@lucky-VirtualBox: ~/central[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/central[00m$ cat [K[K[K[Kcat smellycat
+cat: smellycat: No such file or directory
+monica@lucky-VirtualBox: ~/central[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/central[00m$ pwd
+/home/monica/central
+monica@lucky-VirtualBox: ~/central[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/central[00m$ cd[K[Kcat > smellycat
+yo yo what are you looking for
+^C
+monica@lucky-VirtualBox: ~/central[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/central[00m$ cat smellucat
+cat: smellucat: No such file or directory
+monica@lucky-VirtualBox: ~/central[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/central[00m$ s[Kcar[Kt smellycat
+yo yo what are you looking for
+monica@lucky-VirtualBox: ~/central[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/central[00m$ pwd
+/home/monica/central
+monica@lucky-VirtualBox: ~/central[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/central[00m$ cd ..
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxpwd
+/home/monica
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBox/home[K[K[K[K[Kcp /home/user[K[K[K[Kmonica/s[Kcentral/smellycat[C[C[C[C[C[C[C[C[C[C[C[C[C[C'[C'/home/monica/central/smellycat'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ''/'h'o'm'e'/'u's'e'r'[1P'[1P'[1P'[1P'm'o'n'i'c'a'/'p' [A
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBox[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce'
+'
+r'k'/'D'D'D'D'D'D'D'D'D'D'D'D'D'D'D'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'D'[1P'D'[1P'D'[1P'[C[K[K[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kvisudo
+visudo: /etc/sudoers: Permission denied
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxvi sudo
+[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;28r[?12h[?12l[27m[23m[29m[m[H[2J[?25l[28;1H"sudo" [New File][2;1H[94m~                                                                              [3;1H~                                                                              [4;1H~                                                                              [5;1H~                                                                              [6;1H~                                                                              [7;1H~                                                                              [8;1H~                                                                              [9;1H~                                                                              [10;1H~                                                                              [11;1H~                                                                              [12;1H~                                                                              [13;1H~                                                                              [14;1H~                                                                              [15;1H~                                                                              [16;1H~                                                                              [17;1H~                                                                              [18;1H~                                                                              [19;1H~                                                                              [20;1H~                                                                              [21;1H~                                                                              [22;1H~                                                                              [23;1H~                                                                              [24;1H~                                                                              [25;1H~                                                                              [26;1H~                                                                              [27;1H~                                                                              [1;1H[?25h[?25l[m[28;1HAlready at oldest change[1;1H[?25h[?2004l[?25lt[?25h[?25l[2;1H[K[2;1H[?25h[?25ld[?25h[?25l[3;1H[K[3;1H[?25h[?25le[?25h[?25l[?25h[?25l[34m^X[?25h[?25l^X[?25h[?2004h[?25l[m[28;1HType  :qa!  and press <Enter> to abandon all changes and exit Vim[3;3H[?25h[?25l[?25h[?25l[?25h[28;1H
+[?2004l[?1l>[?1049l[23;0;0t[?2004l
+[1]+  Stopped                 vi sudo
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxvisudo
+visudo: /etc/sudoers: Permission denied
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxcp '/home/monica/central/smellycat.[K, ,[K[K[K"[K' '/home/,[Kmonica/ce 
+ntral/emma'
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxcd emm[K[K[K[K[K[Kcd perk
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ list
+
+Command 'list' not found, did you mean:
+
+  command 'mist' from snap mist (master)
+  command 'mlist' from deb mblaze
+  command 'lift' from deb lift
+  command 'dist' from deb mmh
+  command 'dist' from deb nmh
+  command 'last' from deb util-linux
+  command 'gist' from deb yorick
+  command 'bist' from deb bist
+  command 'flist' from deb mmh
+  command 'flist' from deb nmh
+  command 'hist' from deb loki
+  command 'klist' from deb heimdal-clients
+  command 'klist' from deb krb5-user
+
+See 'snap info <snapname>' for additional versions.
+
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ ls
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ cen[K[K[Kcd..
+cd..: command not found
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ cd ..
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxcp 'DC[K[K/home/mp[Konica/ceny[Ktral/smellcat'ycat'[C[C[C[C 'home/monica/per 
+k/emma'
+cp: cannot create regular file 'home/monica/perk/emma': No such file or directory
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBox[[Kpwd
+/home/monica
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxcd perk
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ la[Ks
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ ls all[K
+ls: cannot access 'al': No such file or directory
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ ls -al
+total 8
+drwxrwxr-x 2 monica monica 4096 मई     4 21:31 [0m[01;34m.[0m
+drwxr-xr-x 5 monica monica 4096 मई     4 21:59 [01;34m..[0m
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ cd.[K ..
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxcp 'home/monixa[K[Kca/central/smellycat' '/home/monica/use 
+r
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K/cen 
+tral/[K[K[K[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[Kper 
+k/emma
+> zz[K[Kmy command is used to re[K[Krename
+> C[K^C
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxcd perk
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ ls
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ ls[K[Kcd ..
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxcd perk
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ ls
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ ls -al
+total 8
+drwxrwxr-x 2 monica monica 4096 मई     4 21:31 [0m[01;34m.[0m
+drwxr-xr-x 5 monica monica 4096 मई     4 21:59 [01;34m..[0m
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ cd ..
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxcd cntra[K[K[K[Kentral
+monica@lucky-VirtualBox: ~/central[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/central[00m$ ls
+central  emma  smellycat
+monica@lucky-VirtualBox: ~/central[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/central[00m$ xhmod a+rwx [K[K[K[K[K[K[K[K[K[K[K[Kcd ..
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxpwd
+/home/monica
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxcentral
+central: command not found
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxcd central
+monica@lucky-VirtualBox: ~/central[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/central[00m$ ls
+central  emma  smellycat
+monica@lucky-VirtualBox: ~/central[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/central[00m$ cd smellycat
+-su: cd: smellycat: Not a directory
+monica@lucky-VirtualBox: ~/central[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/central[00m$ cat smell[K[Klly [Kcat
+yo yo what are you looking for
+monica@lucky-VirtualBox: ~/central[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/central[00m$ 
+monica@lucky-VirtualBox: ~/central[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/central[00m$ cd ..
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxcp 'h[K[K[K[K[Kcp 'home/monica/D[K^V[K[K[K[K[K[K[Konica/central.[K/central emma smellycat' ''h'o' [A
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBox[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm'
+'
+e'.'[1P'/'m'o'n'i'x'[1P'c'a'/'p'w'e'[1P'[1P'e'r'k'/'e'm'm'a'
+cp: cannot stat 'home/monica/central/central emma smellycat': No such file or directory
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxmv [K[K[Kcd perk
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ cat smellycat
+cat: smellycat: No such file or directory
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ ca[Kat > smellycat
+aajai baki xa mero dost
+^C
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ pwd
+/home/monica/perk
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ cd.[K ..
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxcp 'home[Ke?[K/monixa[K[Kxa[K[Kca/central/smellycat, [K[K' 'home?[1@/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/home?[C[C[C[C[C[K/monica/pe 
+k/emma'
+cp: cannot create regular file '/home/monica/pek/emma': No such file or directory
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxcp '/home/monica/centralsmellycat' '/home/monica/per 
+k/emma'
+cp: cannot stat '/home/monica/centralsmellycat': No such file or directory
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxmv '/home/monica/central/smellycat' '/home/mp[Konica/pe 
+rk/emma'[A
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxcp '/home/monica/centralsmellycat' '/home/monica/perk[1P/emma'[A
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxmv '/home/monica/central/smellycat' '/home/monica/perk/emma'
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C '/home/monica/central/smellycat' '/home/monica/perk[1P/emma'[A
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBox[C '/home/monica/central/smellycat' '/home/monica/perk/[1Pemma'[A
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxc '/home/monica/central/smellycat' '/home/monica/perk/emma'[A
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBox[Cp '/home/monica/central/smellycat' '/home/monica/perk/emma'[A
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBox[C[C[C
+
+
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxl[Kcd perl[Kk
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ ls
+emma  smellycat
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ cd ..
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBoxch[K[Kcd perk
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ chm[Kmod a+rwx a[Kemma
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ ls -al
+total 16
+drwxrwxr-x 2 monica monica 4096 मई     4 22:34 [0m[01;34m.[0m
+drwxr-xr-x 5 monica monica 4096 मई     4 21:59 [01;34m..[0m
+-rwxrwxrwx 1 monica monica   31 मई     4 22:34 [01;32memma[0m
+-rw-rw-r-- 1 monica monica   24 मई     4 22:29 smellycat
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ x[Kchmod ugo+rwx[K[K[K[K[K[K[K[K[K[K[K[K[Kcd ..
+monica@lucky-VirtualBox: ~[01;32mmonica@lucky-VirtualBox cd perk
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ sudo chown rachel rmma[K[K[K[Kemma
+[sudo] password for monica: 
+Sorry, try again.
+[sudo] password for monica: 
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ ls -al
+total 16
+drwxrwxr-x 2 monica monica 4096 मई     4 22:34 [0m[01;34m.[0m
+drwxr-xr-x 5 monica monica 4096 मई     4 21:59 [01;34m..[0m
+-rwxrwxrwx 1 rachel monica   31 मई     4 22:34 [01;32memma[0m
+-rw-rw-r-- 1 monica monica   24 मई     4 22:29 smellycat
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ sudo chgrp ro;;[K[K[Kol[Kss emma
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ la -al
+total 16
+drwxrwxr-x 2 monica monica 4096 मई     4 22:34 [0m[01;34m.[0m
+drwxr-xr-x 5 monica monica 4096 मई     4 21:59 [01;34m..[0m
+-rwxrwxrwx 1 rachel ross     31 मई     4 22:34 [01;32memma[0m
+-rw-rw-r-- 1 monica monica   24 मई     4 22:29 smellycat
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ history 30
+   45  ls
+   46  cd ..
+   47  pwd
+   48  central
+   49  cd central
+   50  ls
+   51  cd smellycat
+   52  cat smellycat
+   53  cd ..
+   54  cp 'home/monica/central/central emma smellycat' 'home/monica/perk/emma'
+   55  cd perk
+   56  cat smellycat
+   57  cat > smellycat
+   58  pwd
+   59  cd ..
+   60  cp '/home/monica/central/smellycat' '/home/monica/pek/emma'
+   61  cp '/home/monica/centralsmellycat' '/home/monica/perk/emma'
+   62  cp '/home/monica/central/smellycat' '/home/monica/perk/emma'
+   63  cd perk
+   64  ls
+   65  cd ..
+   66  cd perk
+   67  chmod a+rwx emma
+   68  ls -al
+   69  cd ..
+   70  sudo chown rachel emma
+   71  ls -al
+   72  sudo chgrp ross emma
+   73  la -al
+   74  history 30
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ exxit[K[K[Kit
+logout
+There are stopped jobs.
+monica@lucky-VirtualBox: ~/perk[01;32mmonica@lucky-VirtualBox[00m:[01;34m~/perk[00m$ exit
+logout
+[?2004h[?1049h[22;0;0t[?1h=[?2004h[?12h[?12l[27m[23m[29m[m[H[2J[?25l[1;1Ht
+
+d
+
+[34m^X^X[m
+
+[94m~                                                                              [5;1H~                                                                              [6;1H~                                                                              [7;1H~                                                                              [8;1H~                                                                              [9;1H~                                                                              [10;1H~                                                                              [11;1H~                                                                              [12;1H~                                                                              [13;1H~                                                                              [14;1H~                                                                              [15;1H~                                                                              [16;1H~                                                                              [17;1H~                                                                              [18;1H~                                                                              [19;1H~                                                                              [20;1H~                                                                              [21;1H~                                                                              [22;1H~                                                                              [23;1H~                                                                              [24;1H~                                                                              [25;1H~                                                                              [26;1H~                                                                              [27;1H~                                                                              [3;3H[?25h[28;1H[m[?2004l[?1l>[?1049l[23;0;0tVim: Caught deadly signal HUP
+
+Vim: preserving files...
+
+root@lucky-VirtualBox:~# Vim: Finished.
+
+[28;1Hexu[Kit
+logout
+ogesh@lucky-VirtualBox: exit
+exit
+
+Script done on 2020-05-04 22:52:22+0545
